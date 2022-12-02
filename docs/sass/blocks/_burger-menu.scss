@@ -1,0 +1,87 @@
+
+$linewidth: 20px;
+$lineheight: 3px;
+$radius: 2px;
+$lineMargin:4px;
+$width: 60px;
+$height: 60px;
+$color: #000;
+
+
+.nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $width;
+    height: $height;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+    
+    &:hover{
+        background-color: #00c470;
+
+        .nav-icon__middle, 
+        .nav-icon__middle:before,
+        .nav-icon__middle::after{
+            background-color: #fff;
+        }
+
+
+    }
+}
+
+.nav-icon__middle{
+    position: relative;
+    width: $linewidth;
+    height: $lineheight;
+    background-color: $color;
+    border-radius: $radius;
+ &::before{
+    content: '';
+    position: absolute;
+    top: -($lineheight+$lineMargin);
+    left: 0;
+    width: $linewidth;
+    height: $lineheight;
+    background-color: $color;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    border-radius: $radius;}
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: $lineheight+$lineMargin;
+        left: 0;
+        width: $linewidth;
+        height: $lineheight;
+        background-color: $color;
+        transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+        border-radius: $radius;
+    }
+}
+
+
+.nav-icon.nav-icon--active{
+    position: fixed;
+    z-index: 999;
+}
+
+.nav-icon.nav-icon--active .nav-icon__middle{
+    background-color: transparent; 
+
+    &::before{
+        transform: rotate(45deg);
+        top:0;
+        transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+    &::after{
+        transform: rotate(-45deg);
+        top:0;
+        transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    }
+}
+
+
+

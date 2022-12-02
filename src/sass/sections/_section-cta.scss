@@ -1,0 +1,53 @@
+.section-cta {
+  position: relative;
+  padding: 83px 0 84px 0;
+
+  @include bgImg("./../img/bg/cta-1600.jpg");
+
+  &::before {
+    @extend %overlay;
+  }
+
+  /* Tablet*/
+  @media (max-width: 1199px) {
+    padding: 40px 0 40px 0;
+  }
+  /* Mobile */
+  @media (max-width: 899px) {
+    @include bgImg("./../img/bg/cta-900.jpg");
+  }
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    @include bgImg("./../img/bg/cta-600.jpg");
+  }
+}
+
+.section-cta__content {
+  position: relative;
+  z-index: 9;
+  color: #fff;
+  text-align: center;
+}
+
+.section-cta__title {
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+
+  span {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  /* Mobile */
+  @media (max-width: 899px) {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}

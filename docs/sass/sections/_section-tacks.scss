@@ -1,0 +1,135 @@
+.section-tacks {
+  padding: 80px 0 40px 0;
+  border-bottom: 1px solid #e1e1e1;
+
+  /* Tablet*/
+  @media (max-width: 1199px) {
+    padding: 50px 0 20px 0;
+  }
+  /* Mobile */
+  @media (max-width: 899px) {
+    padding-bottom: 10px;
+  }
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    padding: 40px 0 40px 0;
+  }
+}
+.section-tacks__row {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 114px;
+  align-items: center;
+
+  /* Tablet*/
+  @media (max-width: 1199px) {
+    padding-left: 75px;
+    padding-right: 0;
+  }
+  /* Mobile */
+  @media (max-width: 899px) {
+    flex-direction: row-reverse;
+    padding-left: 0;
+    padding-right: 0;
+    align-items: unset;
+  }
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+
+.section-tacks__row > * {
+  flex-shrink: 0;
+}
+
+.section-tacks__content {
+  width: 570px;
+
+  /* Tablet*/
+  @media (max-width: 1199px) {
+    width: 495px;
+    padding-bottom: 10px;
+  }
+  /* Mobile */
+  @media (max-width: 899px) {
+    width: 270px;
+    padding-top: 5px;
+    padding-bottom: 0;
+  }
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    width: 100%;
+    text-align: center;
+    padding-top: 0px;
+  }
+}
+
+.section-tacks__header {
+  margin-bottom: 30px;
+  /* Tablet*/
+  @media (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+}
+
+.section-tacks__title {
+  margin-bottom: 30px;
+  /* Tablet*/
+  @media (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    margin-bottom: 10px;
+  }
+}
+
+.section-tacks__p {
+  width: 400px;
+  color: $pColor;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2.14;
+  p + p {
+    margin-top: 15px;
+  }
+  /* Tablet*/
+  @media (max-width: 1199px) {
+    width: 420px;
+  }
+
+  /* Mobile */
+  @media (max-width: 899px) {
+    width: 270px;
+    line-height: 1.7;
+  }
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    width: 290px;
+  }
+}
+
+.section-tacks__img {
+  /* Tablet*/
+  @media (max-width: 1199px) {
+    width: 265px;
+  }
+  /* Mobile */
+  @media (max-width: 899px) {
+    width: 270px;
+  }
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    margin-bottom: 10px;
+    width: 100%;
+
+    img {
+      width: 270px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+.slider {
+  position: relative;
+  padding-bottom: 54px;
+  /* Mobile */
+  @media (max-width: 899px) {
+    padding-bottom: 44px;
+  }
+}
+
+.slider__arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  transition: all .3s ease-in;
+  
+  &:hover{
+    background-color: #00c470;
+      }
+  &:hover path {
+    stroke: #f5f5f5; ;
+  }
+  
+
+  &--left {
+    top: 53px;
+    left: -46px;
+    transform: translateX(-100%);
+    @media (max-width: 949px) {
+      left: -30px;
+             }
+  }
+
+  &--right {
+    top: 53px;
+    right: -46px;
+    transform: translateX(100%);
+    @media (max-width: 1199px) {
+      right: -30px;
+    }
+  }
+
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    display: none;
+  }
+}
+
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-item__text {
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 2;
+  text-align: center;
+  padding: 0 5px;
+
+  p + p {
+    margin-top: 15px;
+  }
+  /* Tablet*/
+  @media (max-width: 1199px) {
+    line-height: 1.5;
+   
+  }
+  /* Mobile */
+  @media (max-width: 899px) {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    font-size: 14px;
+    
+  }
+}
+
+.slider-item__auphor {
+  display: flex;
+  align-items: center;
+}
+
+.slider-item__avatar {
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.slider-item__auphor-desc {
+  font-weight: 500;
+  font-size: 16px;
+  /*xs Mobile */
+  @media (max-width: 599px) {
+    font-size: 14px;
+  }
+}
+.slider-item__auphor-title {
+  display: block;
+  margin-bottom: 5px;
+  color: #00c470;
+}
+.slider-item__auphor-name {
+  color: #808080;
+}
+
+.slider__pagination {
+  display: flex;
+  column-gap: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider__pagination-item {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #e1e1e1;
+}
+
+.slider__pagination-item--active {
+  background-color: #00c470;
+}

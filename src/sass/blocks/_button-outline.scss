@@ -1,0 +1,35 @@
+.button__outline {
+  padding: 0 40px 0 40px;
+  height: 60px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 60px;
+  color: #ffffff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+
+  &--solid {
+    border: transparent;
+    background-color: #fff;
+    color: rgba(46, 46, 46, 1);
+  }
+}
+.button__outline:hover {
+  background: #2a2a2a;
+}
+.button__outline:focus {
+  background: #2a2a2a;
+  border: 1px solid #00f19d;
+}
+
+.button__outline--solid:hover {
+  color: #fff;
+}
+.button__outline--solid:focus {
+  border: 1px solid #fff;
+  color: #fff;
+}
